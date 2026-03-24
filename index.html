@@ -37,19 +37,40 @@
             request.send();
         })
     }
-    gettodos(1).
-        then(data1 => {
-            console.log(`get data 1`, data1)
-            return gettodos(2);
-        }).then(data2 => {
-            console.log(`get data 2`, data2);
 
-        }).then(data3 => {
-            console.log(`get data 3`, data3);
+    const getNewtodo = async (id) => {
+        let response = await fetch(`https://jsonplaceholder.typicode.com/todos/${id}`);
+        let data = await response.json()
+        return data;
+    }
+    getNewtodo(5).then(data => {
+        console.log(`get data >>>>`, data)
 
-        }).catch(err => {
-            console.log(`promise error`, err);
-        });
+    })
+
+
+    // fetch('https://jsonplaceholder.typicode.com/todos/1 ')
+    //     .then(data => {
+    //         return data.json();
+
+
+    //     }).then(data1 => {
+    //         console.log(`get data 1`, data1)
+    //     })
+
+    // gettodos(1).
+    //     then(data1 => {
+    //         console.log(`get data 1`, data1)
+    //         return gettodos(2);
+    //     }).then(data2 => {
+    //         console.log(`get data 2`, data2);
+
+    //     }).then(data3 => {
+    //         console.log(`get data 3`, data3);
+
+    //     }).catch(err => {
+    //         console.log(`promise error`, err);
+    //     });
 </script>
 
 <body>
