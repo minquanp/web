@@ -53,11 +53,44 @@
 // }
 // const element = document.getElementById('username');
 
-const div = document.querySelector('.username');
-console.log(div)
-const bt = document.getElementById('myBtn');
-console.log(bt)
-function handleclick() {
-    alert("you click me")
-    console.log("you click me right ?")
-}
+// const div = document.querySelector('.username');
+// console.log(div)
+// const bt = document.getElementById('myBtn');
+// console.log(bt)
+// function handleclick() {
+//     alert("you click me")
+//     console.log("you click me right ?")
+// const button = document.getElementById('bt');
+// const test = document.getElementById('test');
+// const backButton = document.getElementById('btk');
+// button.addEventListener('click', () => {
+//     test.textContent = "you click me"
+//     test.style.color = 'red';
+//     test.style.backgroundColor = 'yellow';
+//     test.classList.add('active');
+// });
+// backButton.addEventListener('click', () => {
+//     test.textContent = "Welcom to my world"
+//     test.style.color = 'black';
+//     test.style.backgroundColor = 'lightgray';
+//     test.classList.remove('active');
+// });
+// const button = document.getElementById('login');
+// button.addEventListener('click', () => {
+//     alert("access login")
+//     console.log("you click me right ?")
+// })
+const user = document.getElementById('username');
+const pass = document.getElementById('password');
+const button = document.getElementById('submit');
+button.addEventListener('click', () => {
+    const username = user.value;
+    const password = pass.value;
+    if (username === "quan@gmail.com" && password === "123456") {
+        alert("access login");
+        window.location.href = "success.html";
+    } else {
+        alert("login fail")
+        user.style.borderColor = 'red';
+    }
+})
