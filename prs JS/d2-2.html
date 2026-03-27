@@ -1,0 +1,85 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Header */
+    .table thead {
+        background: linear-gradient(to right, #0aa06e, #12b886);
+        color: white;
+    }
+
+    .table th {
+        padding: 12px;
+        text-align: left;
+    }
+
+    /* Body */
+    .table td {
+        padding: 12px;
+    }
+
+    /* Dòng xen kẽ */
+    .table tbody tr:nth-child(odd) {
+        background-color: #f2f2f2;
+    }
+
+    .table tbody tr:nth-child(even) {
+        background-color: #e0e0e0;
+    }
+
+    /* Hover */
+    .table tbody tr:hover {
+        background-color: #d6f5e9;
+    }
+
+    /* Button */
+    .table button {
+        padding: 5px 10px;
+        border: 1px solid #999;
+        background: white;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+    .table button:hover {
+        background: #ff4d4f;
+        color: white;
+        border-color: #ff4d4f;
+    }
+</style>
+
+<body>
+    <h1>check day 2-2</h1>
+    <div>
+        <label for=""> nhập dữ liệu vào </label>
+        <input type="text" , id="todo">
+        <button style="color: blue;" id="btn">submit</button>
+        <br>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>action</th>
+                </tr>
+            </thead>
+            <!-- Thêm dòng này để chứa danh sách Todo -->
+            <tbody id="todolist"></tbody>
+        </table>
+    </div>
+
+    <script src="d2-2.js"></script>
+
+</body>
+
+</html>

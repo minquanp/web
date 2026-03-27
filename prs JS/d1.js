@@ -86,7 +86,7 @@ const button = document.getElementById('submit');
 button.addEventListener('click', () => {
     const username = user.value;
     const password = pass.value;
-    if (username === "quan@gmail.com" && password === "123456") {
+    if (username === "admin" && password === "123456") {
         alert("access login");
         window.location.href = "success.html";
     } else {

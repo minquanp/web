@@ -1,0 +1,105 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Header */
+    .table thead {
+        background: linear-gradient(to right, #0aa06e, #12b886);
+        color: white;
+    }
+
+    .table th {
+        padding: 12px;
+        text-align: center;
+    }
+
+    /* Body */
+    .table td {
+        padding: 12px;
+    }
+
+    /* Dòng xen kẽ */
+    .table tbody tr:nth-child(odd) {
+        background-color: #f0ecec;
+    }
+
+    .table tbody tr:nth-child(even) {
+        background-color: #12b886;
+    }
+
+    /* Hover */
+    .table tbody tr:hover {
+        background-color: #c9cc21;
+    }
+
+    /* Button */
+    .table button {
+        padding: 5px 10px;
+        border: 1px solid #999;
+        background: white;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+    .table button:hover {
+        background: #ff4d4f;
+        color: white;
+        border-color: #ff4d4f;
+    }
+
+    .table,
+    th,
+    td {
+        border: 1px solid rgb(31, 29, 29);
+        border-collapse: collapse;
+    }
+</style>
+
+<body>
+    <div style="margin-left: 20px;margin-bottom: 50px;
+    display:flex;flex-direction:column ;gap: 15px;">
+        <div>
+            <label>Title</label>
+            <input type="text" id="title" />
+        </div>
+        <div>
+            <label>Author</label>
+            <input type="text" id="author" />
+        </div>
+        <div>
+            <label>Content</label>
+            <input type="text" id="content" />
+        </div>
+        <div>
+            <button id="saveBlog">Save</button>
+        </div>
+
+    </div>
+    <table class="table" id="blogs">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>title</th>
+                <th>author</th>
+                <th>content</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <script src="call data.js"> test    </script>
+</body>
+
+</html>
