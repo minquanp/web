@@ -3,10 +3,11 @@
 module.exports = {
     async up(queryInterface, Sequelize) {
         await queryInterface.createTable('histories', {
-            //  doctorId: DataTypes.INTEGER,
-            //         patientId: DataTypes.INTEGER,
-            //         description: DataTypes.TEXT,
-
+            // currentNumber: DataTypes.INTEGER,
+            // maxNumber: DataTypes.INTEGER,
+            // Data: DataTypes.DATE,
+            // timeType: DataTypes.STRING,
+            // doctorId: DataTypes.INTEGER,
             id: {
                 allowNull: false,
                 autoIncrement: true,
@@ -20,6 +21,9 @@ module.exports = {
                 type: Sequelize.INTEGER
             },
             description: {
+                type: Sequelize.TEXT
+            },
+            files: {
                 type: Sequelize.TEXT
             },
             createdAt: {
