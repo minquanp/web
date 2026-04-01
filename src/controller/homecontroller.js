@@ -15,7 +15,11 @@ let getHomePage = async (req, res) => {
 let aboutPage = (req, res) => {
     return res.render('test/about.ejs');
 }
+let getCRUD = (req, res) => {
+    return res.send('crud.kkkkkkkk');
+}
 module.exports = {
     getHomePage: getHomePage,
     getAboutPage: aboutPage,
+    getCRUD: getCRUD,
 }
