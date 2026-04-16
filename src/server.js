@@ -16,7 +16,7 @@ initWebRoute(app);
 
 connectDB();
 
-let port = process.env.PORT || 8088;
+let port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log("Server is running on the port: " + port);
 });
